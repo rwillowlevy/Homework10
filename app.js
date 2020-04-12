@@ -89,3 +89,32 @@ function promptUser(answers) {
         };
 
     })
+        .catch(function (err) {
+        });
+};
+
+function generateHTML() {
+    
+    function renderManager() {
+
+    };
+    function renderIntern() {
+
+    };
+    function renderEngineer() {
+
+    };
+};
+function addUser(){
+    inquirer.prompt([
+        {   
+            name: "continue",
+            message: "Do you want to add another team member?",
+            type: "confirm"
+        }
+    ]).then(function(confirmRes){
+        confirmRes.continue ? promptUser() : generateHTML()
+    })
+};
+promptUser();
+
