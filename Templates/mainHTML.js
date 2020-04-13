@@ -1,3 +1,5 @@
+function Htmlgenerator (mainhtml){
+    return `
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,11 +22,13 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
-                {{ team }}
+            <div class="team-area col-12 d-flex justify-content-center"> ${ mainhtml }
             </div>
         </div>
     </div>
 </body>
 
 </html>
+`
+}
+    module.exports = {Htmlgenerator}
