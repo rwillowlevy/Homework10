@@ -6,9 +6,6 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
-
-
-
 function promptUser() {
     return inquirer.prompt([
         {
@@ -24,7 +21,6 @@ function promptUser() {
             message: "What's your role within the company?",
             name: "role",
             choices: ['engineer', 'intern', 'manager']
-            //conditional statement about employment: intern ask for school, if manager ask for office number, if engineer ask for githubname
         },
         {
             type: "input",
@@ -32,4 +28,3 @@ function promptUser() {
             name: "username"
         }, ]);
 }
-
